@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="az_LMservices">
+</Property><Property Name="Solution File" Value="H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices.sln">
+</Property><Property Name="User Options File" Value="H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices.suo">
+</Property><Property Name="Date" Value="03 February 2012">
+</Property><Property Name="Time" Value="14:06">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="az_LMservices.sln" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices.sln">
+</Event><Event ErrorLevel="0" Project="" Source="az_LMservices.suo" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices.suo">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\az_LMservices.vbproj" Description="Project file successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\az_LMservices.vbproj">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\az_LMservices.vbproj.user" Description="Project user file successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\az_LMservices.vbproj.user">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\LMservices.asmx.vb" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\LMservices.asmx.vb">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\mdl_LMServices.vb" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\mdl_LMServices.vb">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\AssemblyInfo.vb" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\Application.Designer.vb" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\Application.Designer.vb">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\Resources.Designer.vb" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\Resources.Designer.vb">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\Settings.Designer.vb" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\Settings.Designer.vb">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\Application.myapp" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\Application.myapp">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\Settings.settings" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\Settings.settings">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\LMservices.asmx" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\LMservices.asmx">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\Web.config" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\Web.config">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\My Project\Resources.resx" Description="File successfully backed up as H:\az_Logics\AI\az_Logics.net\az_LMservices\Backup\az_LMservices\My Project\Resources.resx">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\az_LMservices.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="az_LMservices" Source="az_LMservices\az_LMservices.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="az_LMservices.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="az_LMservices.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="az_LMservices" Source="az_LMservices\az_LMservices.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

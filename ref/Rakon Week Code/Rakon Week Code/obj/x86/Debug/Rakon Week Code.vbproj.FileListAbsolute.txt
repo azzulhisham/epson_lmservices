@@ -1,0 +1,24 @@
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.exe
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.pdb
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.xml
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.vbproj.GenerateResource.Cache
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.exe
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.xml
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.pdb
+C:\Users\EPMMN\Desktop\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.exe.config
+G:\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.exe.config
+G:\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.exe
+G:\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.xml
+G:\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.pdb
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.exe.config
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.exe
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.xml
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.pdb
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.exe
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.pdb
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\bin\Debug\Rakon Week Code.xml
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\ref\Rakon Week Code\Rakon Week Code\obj\x86\Debug\Rakon Week Code.vbproj.GenerateResource.Cache

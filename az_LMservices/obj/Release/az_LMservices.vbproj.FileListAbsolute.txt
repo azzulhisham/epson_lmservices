@@ -1,0 +1,54 @@
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.dll
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.xml
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\ResolveAssemblyReference.cache
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.GenerateResource.Cache
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+D:\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.dll
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.xml
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.GenerateResource.Cache
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+E:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\bin\az_LMservices.dll
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\bin\az_LMservices.xml
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\obj\Release\ResolveAssemblyReference.cache
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.GenerateResource.Cache
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+D:\AI\LogicsCoding\VB2008\Web Services\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.dll
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.xml
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.GenerateResource.Cache
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+G:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.dll
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.xml
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\ResolveAssemblyReference.cache
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\GenerateResource-ResGen.read.1.tlog
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\GenerateResource-ResGen.write.1.tlog
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+H:\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.dll
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.XmlSerializers.dll
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\bin\az_LMservices.xml
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.GenerateResource.Cache
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.XmlSerializers.dll

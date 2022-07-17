@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://az_zulhisham.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://az_zulhisham.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://az_zulhisham.org/">
+      <s:element name="AboutMe">
+        <s:complexType />
+      </s:element>
+      <s:element name="AboutMeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AboutMeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMarkingCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LotNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SpecFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMarkingCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMarkingCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AboutMeSoapIn">
+    <wsdl:part name="parameters" element="tns:AboutMe" />
+  </wsdl:message>
+  <wsdl:message name="AboutMeSoapOut">
+    <wsdl:part name="parameters" element="tns:AboutMeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMarkingCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMarkingCode" />
+  </wsdl:message>
+  <wsdl:message name="GetMarkingCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMarkingCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MarkingCodeSoap">
+    <wsdl:operation name="AboutMe">
+      <wsdl:input message="tns:AboutMeSoapIn" />
+      <wsdl:output message="tns:AboutMeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkingCode">
+      <wsdl:input message="tns:GetMarkingCodeSoapIn" />
+      <wsdl:output message="tns:GetMarkingCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MarkingCodeSoap" type="tns:MarkingCodeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AboutMe">
+      <soap:operation soapAction="http://az_zulhisham.org/AboutMe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkingCode">
+      <soap:operation soapAction="http://az_zulhisham.org/GetMarkingCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MarkingCodeSoap12" type="tns:MarkingCodeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AboutMe">
+      <soap12:operation soapAction="http://az_zulhisham.org/AboutMe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkingCode">
+      <soap12:operation soapAction="http://az_zulhisham.org/GetMarkingCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarkingCode">
+    <wsdl:port name="MarkingCodeSoap" binding="tns:MarkingCodeSoap">
+      <soap:address location="http://172.16.59.252/Marking2/Marking2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MarkingCodeSoap12" binding="tns:MarkingCodeSoap12">
+      <soap12:address location="http://172.16.59.252/Marking2/Marking2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+az_LMservices
+</name>
+</assembly>
+<members>
+<member name="P:az_LMservices.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:az_LMservices.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:az_LMservices.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:az_LMservices.CommonData.DataCenter.#ctor">
+	<remarks/>
+</member><member name="E:az_LMservices.CommonData.DataCenter.getLPR_DetCompleted">
+	<remarks/>
+</member><member name="E:az_LMservices.CommonData.DataCenter.AboutMeCompleted">
+	<remarks/>
+</member><member name="E:az_LMservices.CommonData.DataCenter.HelloWorldCompleted">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.getLPR_Det(System.String)">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.getLPR_DetAsync(System.String)">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.getLPR_DetAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.AboutMe">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.AboutMeAsync">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.AboutMeAsync(System.Object)">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.HelloWorld">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.HelloWorldAsync">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.HelloWorldAsync(System.Object)">
+	<remarks/>
+</member><member name="M:az_LMservices.CommonData.DataCenter.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.DataCenter">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.getLPR_DetCompletedEventHandler">
+	<remarks/>
+</member><member name="P:az_LMservices.CommonData.getLPR_DetCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.getLPR_DetCompletedEventArgs">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.AboutMeCompletedEventHandler">
+	<remarks/>
+</member><member name="P:az_LMservices.CommonData.AboutMeCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.AboutMeCompletedEventArgs">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.HelloWorldCompletedEventHandler">
+	<remarks/>
+</member><member name="P:az_LMservices.CommonData.HelloWorldCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:az_LMservices.CommonData.HelloWorldCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

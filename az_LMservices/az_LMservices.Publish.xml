@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Zulhisham\Desktop\epson\az_LMservices\Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="lmServices" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="LMservices.asmx" publishTime="06/03/2010 15:35:12" />
+    <file relUrl="bin/az_LMservices.pdb" publishTime="05/26/2018 09:56:50" />
+    <file relUrl="bin/az_LMservices.dll" publishTime="05/26/2018 09:56:50" />
+    <file relUrl="Web.config" publishTime="06/19/2015 09:23:09" />
+    <file relUrl="bin/az_LMservices.xml" publishTime="05/26/2018 09:56:50" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://epsonmalaysia.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://epsonmalaysia.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://epsonmalaysia.org/">
+      <s:element name="getLPR_Det">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLPR_DetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLPR_DetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AboutMe">
+        <s:complexType />
+      </s:element>
+      <s:element name="AboutMeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AboutMeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getLPR_DetSoapIn">
+    <wsdl:part name="parameters" element="tns:getLPR_Det" />
+  </wsdl:message>
+  <wsdl:message name="getLPR_DetSoapOut">
+    <wsdl:part name="parameters" element="tns:getLPR_DetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AboutMeSoapIn">
+    <wsdl:part name="parameters" element="tns:AboutMe" />
+  </wsdl:message>
+  <wsdl:message name="AboutMeSoapOut">
+    <wsdl:part name="parameters" element="tns:AboutMeResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DataCenterSoap">
+    <wsdl:operation name="getLPR_Det">
+      <wsdl:input message="tns:getLPR_DetSoapIn" />
+      <wsdl:output message="tns:getLPR_DetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AboutMe">
+      <wsdl:input message="tns:AboutMeSoapIn" />
+      <wsdl:output message="tns:AboutMeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataCenterSoap" type="tns:DataCenterSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLPR_Det">
+      <soap:operation soapAction="http://epsonmalaysia.org/getLPR_Det" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AboutMe">
+      <soap:operation soapAction="http://epsonmalaysia.org/AboutMe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://epsonmalaysia.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DataCenterSoap12" type="tns:DataCenterSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLPR_Det">
+      <soap12:operation soapAction="http://epsonmalaysia.org/getLPR_Det" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AboutMe">
+      <soap12:operation soapAction="http://epsonmalaysia.org/AboutMe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://epsonmalaysia.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataCenter">
+    <wsdl:port name="DataCenterSoap" binding="tns:DataCenterSoap">
+      <soap:address location="http://172.16.59.252/comshare/comshare.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DataCenterSoap12" binding="tns:DataCenterSoap12">
+      <soap12:address location="http://172.16.59.252/comshare/comshare.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
