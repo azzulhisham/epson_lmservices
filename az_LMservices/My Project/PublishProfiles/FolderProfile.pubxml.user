@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\app.publish\</_PublishTargetUrl>
+    <History>True|2022-11-18T06:35:26.7212864Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/az_LMservices.dll">
+      <publishTime>11/18/2022 14:35:25</publishTime>
+    </File>
+    <File Include="bin/az_LMservices.pdb">
+      <publishTime>11/18/2022 14:35:25</publishTime>
+    </File>
+    <File Include="bin/az_LMservices.xml">
+      <publishTime>11/18/2022 14:35:25</publishTime>
+    </File>
+    <File Include="bin/az_LMservices.XmlSerializers.dll">
+      <publishTime>11/18/2022 14:35:25</publishTime>
+    </File>
+    <File Include="LMservices.asmx">
+      <publishTime>06/03/2010 15:35:12</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/19/2015 09:23:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

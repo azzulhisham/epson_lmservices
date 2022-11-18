@@ -52,3 +52,15 @@ C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az
 C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
 C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
 C:\Toshiba\az_Logics\AI\az_Logics.net\az_LMservices\az_LMservices\obj\Release\az_LMservices.XmlSerializers.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.dll.config
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.XmlSerializers.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.xml
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.Resources.resources
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.GenerateResource.cache
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.XmlSerializers.dll
