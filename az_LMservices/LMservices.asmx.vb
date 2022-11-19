@@ -220,7 +220,11 @@ Public Class az_Services
 
                                 sRetVal = ProdCode_(2).Trim & m_WkCode.Trim & Version_(2).Trim
                             Else
-                                sRetVal = Freq_(2).Trim & m_WkCode.Trim & Plant_(2).Trim
+                                If ProdCode_(2).Trim.StartsWith("@") And ProdCode_(2).Trim.EndsWith("@") And ProdCode_.Length >= 3 Then
+                                    sRetVal = Freq_(2).Trim & m_WkCode.Trim
+                                Else
+                                    sRetVal = Freq_(2).Trim & m_WkCode.Trim & Plant_(2).Trim
+                                End If
                             End If
                         Else
                             sRetVal = m_WkCode.Trim
@@ -281,6 +285,8 @@ Public Class az_Services
                 End If
 
                 MrkPrm(2) = MrkPrm_(2).Trim
+            ElseIf ProdCode_(2).Trim.StartsWith("@") And ProdCode_(2).Trim.EndsWith("@") And ProdCode_.Length >= 3 Then
+                addPrm = "," & marking2.GetMarkingSequenceFC(Lot_No, SpecNo, String.Format("{0:D4}-{1:D2}-{2:D2} {3:D2}:{4:D2}:{5:D2}", WebDate.Year, WebDate.Month, WebDate.Day, WebDate.Hour, WebDate.Minute, WebDate.Second))
             End If
 
             RetData(0) = Lot_No
@@ -292,6 +298,146 @@ Public Class az_Services
             RetData(6) = Plant_(2).Trim
 
             Return RetData.Length
+        End With
+
+    End Function
+
+    <WebMethod(Description:="Return A Week Code For FC Package (Advance Version)")>
+    Public Function az_FCweekcode_ad_test(ByVal Lot_No As String, ByVal SpecNo As String) As String
+
+        Dim WebDate As Date = Now
+        Dim WebDateAdv As Date = WebDate.AddDays(1)
+        Dim sRetVal As String = String.Empty
+
+        Dim WebMonth As String = "123456789XYZ"
+        Dim WebDay As String = "123456789ABCDEFGHJKLMNOPQRSTUVWXYZ"
+
+
+        With My.Computer
+            Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
+
+            If Not .FileSystem.FileExists(SpecFile) Then
+                Return -1
+            End If
+
+            Dim FileContent As String = .FileSystem.ReadAllText(SpecFile)
+            Dim ContentItems() As String = FileContent.Split(vbCr)
+
+            Dim Freq() As String = ContentItems.Where(Function(n) n.Contains("L001")).ToArray
+            Dim Plant() As String = ContentItems.Where(Function(n) n.Contains("L002")).ToArray
+            Dim PCode() As String = ContentItems.Where(Function(n) n.Contains("L003")).ToArray
+            Dim nVersion() As String = ContentItems.Where(Function(n) n.Contains("L004")).ToArray
+            Dim DateFmt() As String = ContentItems.Where(Function(n) n.Contains("L005")).ToArray
+            Dim Parameter() As String = ContentItems.Where(Function(n) n.Contains("L006")).ToArray
+
+            If Freq.Length <> 1 Or DateFmt.Length <> 1 Or Plant.Length <> 1 Or Parameter.Length <> 1 Then
+                Return -1
+            End If
+
+            Dim Freq_() As String = Freq(0).Split(","c)
+            Dim Plant_() As String = Plant(0).Split(","c)
+            Dim ProdCode_() As String = PCode(0).Split(","c)
+            Dim Version_() As String = nVersion(0).Split(","c)
+            Dim sFmt() As String = DateFmt(0).Split(","c)
+            Dim MrkPrm() As String = Parameter(0).Split(","c)
+            Dim MrkPrm_() As String = MrkPrm(2).Split("|"c)
+
+            Dim m_WkCode As String = String.Empty
+
+
+            Select Case sFmt(2).Trim
+                Case Is = "ymd"
+                    m_WkCode = String.Format("{0:D2}", WebDate.Year)
+                    m_WkCode = m_WkCode.Substring(m_WkCode.Length - 1) & WebMonth.Substring(WebDate.Month - 1, 1) & WebDay.Substring(WebDate.Day - 1, 1)
+
+                    Try
+                        If Not MrkPrm(2).Trim.ToUpper.Contains("|") Then
+                            If MrkPrm(2).Trim.ToUpper.Contains("RA") Then
+                                If ProdCode_(2).Trim = "-" Then
+                                    ProdCode_(2) = ""
+                                End If
+
+                                sRetVal = ProdCode_(2).Trim & m_WkCode.Trim & Version_(2).Trim
+                            Else
+                                If ProdCode_(2).Trim.StartsWith("@") And ProdCode_(2).Trim.EndsWith("@") And ProdCode_.Length >= 3 Then
+                                    sRetVal = Freq_(2).Trim & m_WkCode.Trim
+                                Else
+                                    sRetVal = Freq_(2).Trim & m_WkCode.Trim & Plant_(2).Trim
+                                End If
+                            End If
+                        Else
+                            sRetVal = m_WkCode.Trim
+                        End If
+
+                    Catch ex As Exception
+                        Return -1
+                    End Try
+                Case Else
+                    Dim myCI As New CultureInfo("en-US")
+                    Dim myCal As Calendar = myCI.Calendar
+                    Dim YrVal As String = String.Format("{0:D4}", WebDate.Year)
+
+                    Try
+                        If Not MrkPrm(2).Trim.ToUpper.Contains("|") Then
+                            sRetVal = Freq_(2).Trim & YrVal.Substring(3) & String.Format("{0:D2}", myCal.GetWeekOfYear(Now, CalendarWeekRule.FirstDay, DayOfWeek.Sunday)) & Plant_(2).Trim
+                        Else
+                            sRetVal = YrVal.Substring(3) & String.Format("{0:D2}", myCal.GetWeekOfYear(Now, CalendarWeekRule.FirstDay, DayOfWeek.Sunday))
+                        End If
+                    Catch ex As Exception
+                        Return -1
+                    End Try
+            End Select
+
+            'ReDim RetData(6)
+            Dim addPrm As String = ""
+
+            If MrkPrm(2).Trim.ToUpper.Contains("SG") Then
+                addPrm = ",3030"
+            ElseIf MrkPrm(2).Trim.ToUpper.Contains("RA") Then
+                addPrm = "," & Freq_(2).Trim & MrkPrm(2).Trim.ToUpper.Substring(2, 4) & Plant_(2).Trim
+            ElseIf MrkPrm(2).Trim.ToUpper.Contains("|") And MrkPrm_.Length >= 3 Then
+                If MrkPrm_(0).Contains("ymd") Then
+                    sRetVal = MrkPrm_(0).Trim.Replace("ymd", sRetVal)
+                ElseIf MrkPrm_(0).Contains("yww") Then
+                    sRetVal = MrkPrm_(0).Trim.Replace("yww", sRetVal)
+                End If
+
+                If MrkPrm_(1).Contains("#") Then
+                    Dim CntSymbol As Integer = 0
+                    Dim CntLot As Integer = GetSerialNoBySpec(Lot_No, SpecNo,
+                                                              String.Format("{0:D4}-{1:D2}-{2:D2}", WebDate.Year, WebDate.Month, WebDate.Day),
+                                                              String.Format("{0:D4}-{1:D2}-{2:D2}", WebDateAdv.Year, WebDateAdv.Month, WebDateAdv.Day))
+
+                    For idx = 0 To MrkPrm_(1).Length - 1
+                        If MrkPrm_(1).Substring(idx, 1) = "#" Then
+                            CntSymbol += 1
+                        End If
+                    Next
+
+                    If CntLot <= 0 Then
+                        Return -1
+                    Else
+                        addPrm = "," & CntLot.ToString.PadLeft(CntSymbol, "0"c) & MrkPrm_(1).Replace("#", "")
+                    End If
+                Else
+                    addPrm = ""
+                End If
+
+                MrkPrm(2) = MrkPrm_(2).Trim
+            ElseIf ProdCode_(2).Trim.StartsWith("@") And ProdCode_(2).Trim.EndsWith("@") And ProdCode_.Length >= 3 Then
+                addPrm = "," & marking2.GetMarkingSequenceFC(Lot_No, SpecNo, String.Format("{0:D4}-{1:D2}-{2:D2} {3:D2}:{4:D2}:{5:D2}", WebDate.Year, WebDate.Month, WebDate.Day, WebDate.Hour, WebDate.Minute, WebDate.Second))
+            End If
+
+
+            'RetData(0) = Lot_No
+            'RetData(1) = SpecNo
+            'RetData(2) = sRetVal & addPrm   'weekcode always comes before comma
+            'RetData(3) = MrkPrm(2).Trim
+            'RetData(4) = Freq_(2).Trim
+            'RetData(5) = sFmt(2).Trim
+            'RetData(6) = Plant_(2).Trim
+
+            Return sRetVal & addPrm
         End With
 
     End Function
@@ -461,6 +607,7 @@ Public Class az_Services
         Dim MarkingData As String = String.Empty
         Dim TargetSpec As String = String.Empty
         Dim FuncRet As Integer = 0
+        Dim m_Today As Date = Now
 
 
         If Not Lot_No.Contains("-") And Lot_No.Length <> 10 Then
@@ -541,7 +688,7 @@ Public Class az_Services
             '--- Testing Location -> Remark this line for runtime ---
             'IMI_Path = "D:\AI\MyVBProject\VB_Project\ML-7111A\PXFA\Data\IMI\ML-7111A"
             Dim IMIFilePath As String = IMI_Path & "\" & MI_Spec & ".dat"
-            Dim ALineCode As String = marking2.GetMarkingCode(Lot_No, MI_Spec)
+            Dim ALineCode As String = marking2.GetMarkingCode(Lot_No, MI_Spec, String.Format("{0:D4}-{1:D2}-{2:D2} {3:D2}:{4:D2}:{5:D2}", m_Today.Year, m_Today.Month, m_Today.Day, m_Today.Hour, m_Today.Minute, m_Today.Second))
 
             If My.Computer.FileSystem.FileExists(IMIFilePath) Or Not ALineCode = "" Then
                 If ParseSpecData(IMIFilePath, Records) < 0 Then
@@ -561,8 +708,8 @@ Public Class az_Services
                         RetData(5) = .Profile
                         RetData(6) = ""
                         RetData(7) = ""
-                        RetData(8) = IIf(ALineCode = "", FormMarkCode1(), ALineCode)        'Freq. & Plant
-                        RetData(9) = FormMarkCode2()                                        'Weekcode
+                        RetData(8) = IIf(ALineCode = "", FormMarkCode1(m_Today), ALineCode)        'Freq. & Plant
+                        RetData(9) = FormMarkCode2(m_Today)                                        'Weekcode
 
                         Dim FoundMatch As Match = FindMatches.Match(RetData(8))
 
@@ -632,7 +779,7 @@ Public Class az_Services
 
         Else
             ReDim RetData(2)
-            MarkingData = "A" & FormWeekCode("yww") & "L"
+            MarkingData = "A" & FormWeekCode(m_Today, "yww") & "L"
             RetData(0) = Lot_No
             RetData(1) = MI_Spec
             RetData(2) = MarkingData
@@ -925,7 +1072,7 @@ Public Class az_Services
 
     End Function
 
-    Private Function FormMarkCode1() As String
+    Private Function FormMarkCode1(ByVal MarkingDate As Date) As String
 
         Dim MarkData As String = String.Empty
 
@@ -983,7 +1130,7 @@ Public Class az_Services
 
     End Function
 
-    Private Function FormMarkCode2() As String
+    Private Function FormMarkCode2(ByVal MarkingDate As Date) As String
 
         Dim MarkData As String = String.Empty
 
@@ -1004,28 +1151,28 @@ Public Class az_Services
 
                 If .sVersion.Length > 2 Then
                     If .sProdCode = "T" Or .sProdCode = "E" Then
-                        MarkData = .sProdCode & " " & FormWeekCode(.sWkCdFormat)
+                        MarkData = .sProdCode & " " & FormWeekCode(MarkingDate, .sWkCdFormat)
                     Else
-                        MarkData = .sProdCode & FormWeekCode(.sWkCdFormat)
+                        MarkData = .sProdCode & FormWeekCode(MarkingDate, .sWkCdFormat)
                     End If
                 Else
                     If .sVersion = "_" Then
-                        MarkData = .sPlant & FormWeekCode(.sWkCdFormat)
+                        MarkData = .sPlant & FormWeekCode(MarkingDate, .sWkCdFormat)
                     ElseIf .sVersion = "!" Or .sVersion = "-" Or .sVersion = "##" Then
-                        MarkData = FormWeekCode(.sWkCdFormat)
+                        MarkData = FormWeekCode(MarkingDate, .sWkCdFormat)
                     ElseIf .sParameter.ToUpper = "FA-128P" Then
-                        MarkData = .sPlant & FormWeekCode(.sWkCdFormat)
+                        MarkData = .sPlant & FormWeekCode(MarkingDate, .sWkCdFormat)
                     Else
                         If .sParameter.ToUpper = "TSX-2016H" Or .sParameter.ToUpper.Contains("TCI_F") Then
-                            MarkData = FormWeekCode(.sWkCdFormat)
+                            MarkData = FormWeekCode(MarkingDate, .sWkCdFormat)
                         Else
-                            MarkData = .sProdCode & FormWeekCode(.sWkCdFormat) & .sVersion
+                            MarkData = .sProdCode & FormWeekCode(MarkingDate, .sWkCdFormat) & .sVersion
                         End If
                     End If
                 End If
 
                 If .sParameter.ToUpper = "FA-12T" Then
-                    MarkData = FormWeekCode(.sWkCdFormat)
+                    MarkData = FormWeekCode(MarkingDate, .sWkCdFormat)
                 End If
             End With
         Catch ex As Exception
@@ -1092,11 +1239,11 @@ Public Class az_Services
 
     End Function
 
-    Private Function FormWeekCode(Optional ByVal strFormat As String = "ymd") As String
+    Private Function FormWeekCode(ByVal MarkingDate As Date, Optional ByVal strFormat As String = "ymd") As String
 
         Dim m_Format As String = strFormat.ToLower.Trim
         Dim m_WkCode As String = String.Empty
-        Dim m_Today As Date = Today
+        Dim m_Today As Date = MarkingDate
 
         Dim Year_D As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         Dim Month_D As String = "123456789XYZ"

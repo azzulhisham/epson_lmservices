@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://az_zulhisham.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://az_zulhisham.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://az_zulhisham.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://az_zulhisham.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://az_zulhisham.org/">
       <s:element name="AboutMe">
@@ -17,6 +17,7 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="LotNo" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="SpecFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarkingDate" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -24,6 +25,38 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="GetMarkingCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSequenceMarked">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LotNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SpecFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarkingCode1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSequenceMarkedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSequenceMarkedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMarkingSequenceFC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LotNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SpecFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarkingDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMarkingSequenceFCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMarkingSequenceFCResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -41,6 +74,18 @@
   <wsdl:message name="GetMarkingCodeSoapOut">
     <wsdl:part name="parameters" element="tns:GetMarkingCodeResponse" />
   </wsdl:message>
+  <wsdl:message name="SetSequenceMarkedSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSequenceMarked" />
+  </wsdl:message>
+  <wsdl:message name="SetSequenceMarkedSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSequenceMarkedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMarkingSequenceFCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMarkingSequenceFC" />
+  </wsdl:message>
+  <wsdl:message name="GetMarkingSequenceFCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMarkingSequenceFCResponse" />
+  </wsdl:message>
   <wsdl:portType name="MarkingCodeSoap">
     <wsdl:operation name="AboutMe">
       <wsdl:input message="tns:AboutMeSoapIn" />
@@ -49,6 +94,14 @@
     <wsdl:operation name="GetMarkingCode">
       <wsdl:input message="tns:GetMarkingCodeSoapIn" />
       <wsdl:output message="tns:GetMarkingCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSequenceMarked">
+      <wsdl:input message="tns:SetSequenceMarkedSoapIn" />
+      <wsdl:output message="tns:SetSequenceMarkedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkingSequenceFC">
+      <wsdl:input message="tns:GetMarkingSequenceFCSoapIn" />
+      <wsdl:output message="tns:GetMarkingSequenceFCSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="MarkingCodeSoap" type="tns:MarkingCodeSoap">
@@ -64,6 +117,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetMarkingCode">
       <soap:operation soapAction="http://az_zulhisham.org/GetMarkingCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSequenceMarked">
+      <soap:operation soapAction="http://az_zulhisham.org/SetSequenceMarked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkingSequenceFC">
+      <soap:operation soapAction="http://az_zulhisham.org/GetMarkingSequenceFC" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -92,13 +163,31 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SetSequenceMarked">
+      <soap12:operation soapAction="http://az_zulhisham.org/SetSequenceMarked" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkingSequenceFC">
+      <soap12:operation soapAction="http://az_zulhisham.org/GetMarkingSequenceFC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="MarkingCode">
     <wsdl:port name="MarkingCodeSoap" binding="tns:MarkingCodeSoap">
-      <soap:address location="http://172.16.59.252/Marking2/Marking2.asmx" />
+      <soap:address location="http://localhost/Marking2/Marking2.asmx" />
     </wsdl:port>
     <wsdl:port name="MarkingCodeSoap12" binding="tns:MarkingCodeSoap12">
-      <soap12:address location="http://172.16.59.252/Marking2/Marking2.asmx" />
+      <soap12:address location="http://localhost/Marking2/Marking2.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

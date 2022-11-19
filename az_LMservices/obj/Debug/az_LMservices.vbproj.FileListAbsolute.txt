@@ -76,3 +76,13 @@ C:\Users\Zulhisham\Desktop\epson\az_LMservices\az_LMservices\obj\Debug\GenerateR
 C:\Users\Zulhisham\Desktop\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.dll
 C:\Users\Zulhisham\Desktop\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.xml
 C:\Users\Zulhisham\Desktop\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.pdb
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.dll.config
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.pdb
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\az_LMservices.xml
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.Resources.resources
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.vbproj.GenerateResource.cache
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.vbproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.xml
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.pdb

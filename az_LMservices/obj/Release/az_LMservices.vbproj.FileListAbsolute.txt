@@ -64,3 +64,4 @@ C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMse
 C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.xml
 C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.pdb
 C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.XmlSerializers.dll
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Release\az_LMservices.vbproj.AssemblyReference.cache

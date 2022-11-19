@@ -67,7 +67,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://172.16.59.252/Marking2/Marking2.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost/Marking2/Marking2.asmx")>  _
         Public ReadOnly Property az_LMservices_Marking2_MarkingCode() As String
             Get
                 Return CType(Me("az_LMservices_Marking2_MarkingCode"),String)
