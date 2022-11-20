@@ -314,7 +314,8 @@ Public Class az_Services
 
 
         With My.Computer
-            Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
+            'Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
+            Dim SpecFile As String = "D:\MachineNet\MacDB\Marking\FC\IMI\" & SpecNo & ".dat"
 
             If Not .FileSystem.FileExists(SpecFile) Then
                 Return -1
@@ -527,6 +528,7 @@ Public Class az_Services
         'Text Rec Fail  : FuncRet = -11
 
         Dim FuncRet As Integer = InsertNewRecord_sql(MarkRec) + (SaveTextRec(MarkingRec) * 10)
+        FuncRet *= marking2.SetSequenceMarked(MarkRec.Lot_No, MarkRec.IMI_No, MarkRec.MData1)
         Return FuncRet
 
     End Function
@@ -1732,6 +1734,7 @@ Public Class az_Services
 
         Dim RetVal As Integer = 0
         Dim Result As Integer = 0
+        Dim LotLen As Integer = 10
 
         Dim sConnStr As String = _
                 "SERVER=" & sqlServer & "; " & _
@@ -1812,6 +1815,35 @@ Public Class az_Services
                 "END "
         End If
 
+        If LotNo.Length > LotLen Then
+            strSQL =
+                "IF NOT EXISTS ( " & vbCrLf &
+                "SELECT * FROM RecordSerNo " & vbCrLf &
+                "WHERE lot_no='" & LotNo.Substring(0, LotLen) & "' AND IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "') " & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "DECLARE @SerNo Int; " & vbCrLf &
+                "IF NOT EXISTS (" & vbCrLf &
+                "SELECT * FROM Records " & vbCrLf &
+                "WHERE lot_no='" & LotNo.Substring(0, LotLen) & "') " & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "SELECT @SerNo=(ISNULL(MAX(SerNo), 0) + 1) FROM RecordSerNo " & vbCrLf &
+                "WHERE IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "' " & vbCrLf &
+                "GROUP BY IMI_No " & vbCrLf &
+                "INSERT INTO RecordSerNo VALUES ('" & LotNo.Substring(0, LotLen) & "', '" & SpecNo & "', GETDATE(), ISNULL(@SerNo, 1)) " & vbCrLf &
+                "SELECT ISNULL(@SerNo, 1) " & vbCrLf &
+                "END " & vbCrLf &
+                "ELSE" & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "SELECT ISNULL(@SerNo, 0) " & vbCrLf &
+                "END " & vbCrLf &
+                "END " & vbCrLf &
+                "ELSE " & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "SELECT TOP 1 @SerNo=SerNo FROM RecordSerNo " & vbCrLf &
+                "WHERE lot_no='" & LotNo.Substring(0, LotLen) & "' AND IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "' ORDER BY RecDate DESC " & vbCrLf &
+                "SELECT ISNULL(@SerNo, 1) " & vbCrLf &
+                "END "
+        End If
 
         Try
             ' Open the connection, execute the command. Do not close the

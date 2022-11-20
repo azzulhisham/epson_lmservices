@@ -5,6 +5,12 @@
     Public Const sqluid As String = "VB-SQL"
     Public Const sqlpwd As String = "Anyn0m0us"
 
+    'Public Const sqlServer As String = "DESKTOP-TLVFD7V\SQLEXPRESS"
+    'Public Const sqlName As String = "Marking"
+    'Public Const sqluid As String = "sa"
+    'Public Const sqlpwd As String = "Az@HoePinc0615"
+
+
     Public Const odbcServer As String = "local"
     Public Const odbcName As String = "Marking.mdb"
     Public Const odbcuid As String = ""
