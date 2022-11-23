@@ -172,22 +172,22 @@ Namespace Marking2
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://az_zulhisham.org/GetMarkingSequenceFC", RequestNamespace:="http://az_zulhisham.org/", ResponseNamespace:="http://az_zulhisham.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function GetMarkingSequenceFC(ByVal LotNo As String, ByVal SpecFile As String, ByVal MarkingDate As String) As String
-            Dim results() As Object = Me.Invoke("GetMarkingSequenceFC", New Object() {LotNo, SpecFile, MarkingDate})
+        Public Function GetMarkingSequenceFC(ByVal format As String, ByVal seqNo As String, ByVal option1 As String, ByVal option2 As String) As String
+            Dim results() As Object = Me.Invoke("GetMarkingSequenceFC", New Object() {format, seqNo, option1, option2})
             Return CType(results(0),String)
         End Function
         
         '''<remarks/>
-        Public Overloads Sub GetMarkingSequenceFCAsync(ByVal LotNo As String, ByVal SpecFile As String, ByVal MarkingDate As String)
-            Me.GetMarkingSequenceFCAsync(LotNo, SpecFile, MarkingDate, Nothing)
+        Public Overloads Sub GetMarkingSequenceFCAsync(ByVal format As String, ByVal seqNo As String, ByVal option1 As String, ByVal option2 As String)
+            Me.GetMarkingSequenceFCAsync(format, seqNo, option1, option2, Nothing)
         End Sub
         
         '''<remarks/>
-        Public Overloads Sub GetMarkingSequenceFCAsync(ByVal LotNo As String, ByVal SpecFile As String, ByVal MarkingDate As String, ByVal userState As Object)
+        Public Overloads Sub GetMarkingSequenceFCAsync(ByVal format As String, ByVal seqNo As String, ByVal option1 As String, ByVal option2 As String, ByVal userState As Object)
             If (Me.GetMarkingSequenceFCOperationCompleted Is Nothing) Then
                 Me.GetMarkingSequenceFCOperationCompleted = AddressOf Me.OnGetMarkingSequenceFCOperationCompleted
             End If
-            Me.InvokeAsync("GetMarkingSequenceFC", New Object() {LotNo, SpecFile, MarkingDate}, Me.GetMarkingSequenceFCOperationCompleted, userState)
+            Me.InvokeAsync("GetMarkingSequenceFC", New Object() {format, seqNo, option1, option2}, Me.GetMarkingSequenceFCOperationCompleted, userState)
         End Sub
         
         Private Sub OnGetMarkingSequenceFCOperationCompleted(ByVal arg As Object)

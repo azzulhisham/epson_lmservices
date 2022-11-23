@@ -139,13 +139,13 @@ az_LMservices
 <member name="M:az_LMservices.Marking2.MarkingCode.SetSequenceMarkedAsync(System.String,System.String,System.String,System.Object)">
 <remarks/>
 </member>
-<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFC(System.String,System.String,System.String)">
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFC(System.String,System.String,System.String,System.String)">
 <remarks/>
 </member>
-<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCAsync(System.String,System.String,System.String)">
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCAsync(System.String,System.String,System.String,System.String)">
 <remarks/>
 </member>
-<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCAsync(System.String,System.String,System.String,System.Object)">
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCAsync(System.String,System.String,System.String,System.String,System.Object)">
 <remarks/>
 </member>
 <member name="M:az_LMservices.Marking2.MarkingCode.CancelAsync(System.Object)">
