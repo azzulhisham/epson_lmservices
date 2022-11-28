@@ -1,14 +1,14 @@
 ﻿Module mdl_LMServices
 
-    'Public Const sqlServer As String = "172.16.59.254\SQLEXPRESS"
-    'Public Const sqlName As String = "Marking"
-    'Public Const sqluid As String = "VB-SQL"
-    'Public Const sqlpwd As String = "Anyn0m0us"
-
-    Public Const sqlServer As String = "DESKTOP-TLVFD7V\SQLEXPRESS"
+    Public Const sqlServer As String = "172.16.59.254\SQLEXPRESS"
     Public Const sqlName As String = "Marking"
-    Public Const sqluid As String = "sa"
-    Public Const sqlpwd As String = "Az@HoePinc0615"
+    Public Const sqluid As String = "VB-SQL"
+    Public Const sqlpwd As String = "Anyn0m0us"
+
+    'Public Const sqlServer As String = "DESKTOP-TLVFD7V\SQLEXPRESS"
+    'Public Const sqlName As String = "Marking"
+    'Public Const sqluid As String = "sa"
+    'Public Const sqlpwd As String = "Az@HoePinc0615"
 
 
     Public Const odbcServer As String = "local"

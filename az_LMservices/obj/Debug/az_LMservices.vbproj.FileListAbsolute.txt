@@ -86,3 +86,4 @@ C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMserv
 C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.dll
 C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.xml
 C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.pdb
+C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\obj\Debug\az_LMservices.vbproj.AssemblyReference.cache

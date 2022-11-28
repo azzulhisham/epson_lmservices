@@ -106,6 +106,12 @@ az_LMservices
 <member name="E:az_LMservices.Marking2.MarkingCode.GetMarkingCodeCompleted">
 <remarks/>
 </member>
+<member name="E:az_LMservices.Marking2.MarkingCode.SetSequenceMarkedCompleted">
+<remarks/>
+</member>
+<member name="E:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCCompleted">
+<remarks/>
+</member>
 <member name="M:az_LMservices.Marking2.MarkingCode.AboutMe">
 <remarks/>
 </member>
@@ -115,13 +121,31 @@ az_LMservices
 <member name="M:az_LMservices.Marking2.MarkingCode.AboutMeAsync(System.Object)">
 <remarks/>
 </member>
-<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingCode(System.String,System.String)">
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingCode(System.String,System.String,System.String)">
 <remarks/>
 </member>
-<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingCodeAsync(System.String,System.String)">
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingCodeAsync(System.String,System.String,System.String)">
 <remarks/>
 </member>
-<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingCodeAsync(System.String,System.String,System.Object)">
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingCodeAsync(System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:az_LMservices.Marking2.MarkingCode.SetSequenceMarked(System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:az_LMservices.Marking2.MarkingCode.SetSequenceMarkedAsync(System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:az_LMservices.Marking2.MarkingCode.SetSequenceMarkedAsync(System.String,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFC(System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCAsync(System.String,System.String,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:az_LMservices.Marking2.MarkingCode.GetMarkingSequenceFCAsync(System.String,System.String,System.String,System.String,System.Object)">
 <remarks/>
 </member>
 <member name="M:az_LMservices.Marking2.MarkingCode.CancelAsync(System.Object)">
@@ -143,6 +167,24 @@ az_LMservices
 <remarks/>
 </member>
 <member name="P:az_LMservices.Marking2.GetMarkingCodeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:az_LMservices.Marking2.SetSequenceMarkedCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:az_LMservices.Marking2.SetSequenceMarkedCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:az_LMservices.Marking2.SetSequenceMarkedCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:az_LMservices.Marking2.GetMarkingSequenceFCCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:az_LMservices.Marking2.GetMarkingSequenceFCCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:az_LMservices.Marking2.GetMarkingSequenceFCCompletedEventArgs.Result">
 <remarks/>
 </member>
 </members>

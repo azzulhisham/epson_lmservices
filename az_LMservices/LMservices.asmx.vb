@@ -175,8 +175,8 @@ Public Class az_Services
 
 
         With My.Computer
-            Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
-            'Dim SpecFile As String = "D:\MachineNet\MacDB\Marking\FC\IMI\" & SpecNo & ".dat"
+            'Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
+            Dim SpecFile As String = "D:\MachineNet\MacDB\Marking\FC\IMI\" & SpecNo & ".dat"
 
             If Not .FileSystem.FileExists(SpecFile) Then
                 Return -1
@@ -191,6 +191,7 @@ Public Class az_Services
             Dim nVersion() As String = ContentItems.Where(Function(n) n.Contains("L004")).ToArray
             Dim DateFmt() As String = ContentItems.Where(Function(n) n.Contains("L005")).ToArray
             Dim Parameter() As String = ContentItems.Where(Function(n) n.Contains("L006")).ToArray
+            Dim Formats() As String = ContentItems.Where(Function(n) n.Contains("L007")).ToArray
 
             If Freq.Length <> 1 Or DateFmt.Length <> 1 Or Plant.Length <> 1 Or Parameter.Length <> 1 Then
                 Return -1
@@ -203,6 +204,7 @@ Public Class az_Services
             Dim sFmt() As String = DateFmt(0).Split(","c)
             Dim MrkPrm() As String = Parameter(0).Split(","c)
             Dim MrkPrm_() As String = MrkPrm(2).Split("|"c)
+            Dim Formats_() As String = Formats(0).Split(","c)
 
             Dim m_WkCode As String = String.Empty
 
@@ -279,7 +281,17 @@ Public Class az_Services
                     If CntLot <= 0 Then
                         Return -1
                     Else
-                        addPrm = "," & CntLot.ToString.PadLeft(CntSymbol, "0"c) & MrkPrm_(1).Replace("#", "")
+                        If Formats_(2).Trim() <> "-" And Formats_(2).Contains("|") Then
+                            Dim GetFormats() As String = Formats_(2).Split("|")
+
+                            If GetFormats.Length = 3 Then
+                                addPrm = "," & marking2.GetMarkingSequenceFC(GetFormats(0), CntLot, GetFormats(1), GetFormats(2)).Trim().PadLeft(CntSymbol, "0"c) & MrkPrm_(1).Replace("#", "")
+                            Else
+                                addPrm = "," & CntLot.ToString.PadLeft(CntSymbol, "0"c) & MrkPrm_(1).Replace("#", "")
+                            End If
+                        Else
+                            addPrm = "," & CntLot.ToString.PadLeft(CntSymbol, "0"c) & MrkPrm_(1).Replace("#", "")
+                        End If
                     End If
                 Else
                     addPrm = ""
@@ -313,8 +325,8 @@ Public Class az_Services
 
 
         With My.Computer
-            Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
-            'Dim SpecFile As String = "D:\MachineNet\MacDB\Marking\FC\IMI\" & SpecNo & ".dat"
+            'Dim SpecFile As String = "C:\tmp\Test\" & SpecNo & ".dat"
+            Dim SpecFile As String = "D:\MachineNet\MacDB\Marking\FC\IMI\" & SpecNo & ".dat"
 
             If Not .FileSystem.FileExists(SpecFile) Then
                 Return -1
