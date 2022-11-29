@@ -1713,23 +1713,23 @@ Public Class az_Services
                 .Opt = .Opt.Substring(0, 8)
             End If
 
-            strSQL = "IF NOT EXISTS (SELECT * FROM Records WHERE Lot_No='" & .Lot_No & "') INSERT INTO Records " & _
-                "(Lot_No, IMI_No, FreqVal, Opt, RecDate, [Profile], CtrlNo, MacNo, MData1, MData2, MData3, MData4, MData5, MData6) VALUES (" & _
-                ch & .Lot_No & ch & ", " & _
-                ch & .IMI_No & ch & ", " & _
-                ch & .FreqVal & ch & ", " & _
-                ch & .Opt & ch & ", " & _
-                "GETDATE()" & ", " & _
-                ch & .Profile & ch & ", " & _
-                ch & .CtrlNo & ch & ", " & _
-                ch & .MacNo & ch & ", " & _
-                ch & .MData1 & ch & ", " & _
-                ch & .MData2 & ch & ", " & _
-                ch & .MData3 & ch & ", " & _
-                ch & .MData4 & ch & ", " & _
-                ch & .MData5 & ch & ", " & _
-                ch & .MData6 & ch & ") ELSE UPDATE Records SET Opt='" & .Opt & "', RecDate=GETDATE(), " & _
-                "IMI_No='" & .IMI_No & "', FreqVal='" & .FreqVal & "', [Profile]='" & .Profile & "', CtrlNo='" & .CtrlNo & "', MacNo='" & .MacNo & "', MData1='" & .MData1 & "', MData2='" & .MData2 & "', MData3='" & .MData3 & "', MData4='" & .MData4 & "', MData5='" & .MData5 & "', MData6='" & .MData6 & "' " & _
+            strSQL = "IF NOT EXISTS (SELECT * FROM Records WHERE IMI_No='' AND Lot_No='" & .Lot_No & "') INSERT INTO Records " &
+                "(Lot_No, IMI_No, FreqVal, Opt, RecDate, [Profile], CtrlNo, MacNo, MData1, MData2, MData3, MData4, MData5, MData6) VALUES (" &
+                ch & .Lot_No & ch & ", " &
+                ch & .IMI_No & ch & ", " &
+                ch & .FreqVal & ch & ", " &
+                ch & .Opt & ch & ", " &
+                "GETDATE()" & ", " &
+                ch & .Profile & ch & ", " &
+                ch & .CtrlNo & ch & ", " &
+                ch & .MacNo & ch & ", " &
+                ch & .MData1 & ch & ", " &
+                ch & .MData2 & ch & ", " &
+                ch & .MData3 & ch & ", " &
+                ch & .MData4 & ch & ", " &
+                ch & .MData5 & ch & ", " &
+                ch & .MData6 & ch & ") ELSE UPDATE Records SET Opt='" & .Opt & "', RecDate=GETDATE(), " &
+                "IMI_No='" & .IMI_No & "', FreqVal='" & .FreqVal & "', [Profile]='" & .Profile & "', CtrlNo='" & .CtrlNo & "', MacNo='" & .MacNo & "', MData1='" & .MData1 & "', MData2='" & .MData2 & "', MData3='" & .MData3 & "', MData4='" & .MData4 & "', MData5='" & .MData5 & "', MData6='" & .MData6 & "' " &
                 "WHERE Lot_No='" & .Lot_No & "' "
         End With
 

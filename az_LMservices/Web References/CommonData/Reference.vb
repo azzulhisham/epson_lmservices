@@ -42,7 +42,7 @@ Namespace CommonData
         '''<remarks/>
         Public Sub New()
             MyBase.New
-            Me.Url = "http://172.16.59.252/comshare/comshare.asmx"
+            Me.Url = Global.az_LMservices.My.MySettings.Default.az_LMservices_CommonData_DataCenter
             If (Me.IsLocalFileSystemWebService(Me.Url) = true) Then
                 Me.UseDefaultCredentials = true
                 Me.useDefaultCredentialsSetExplicitly = false
