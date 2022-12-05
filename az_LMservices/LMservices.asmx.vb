@@ -1766,32 +1766,32 @@ Public Class az_Services
 
         Dim dbConnection As New SqlConnection(sConnStr)
         Dim ch As Char = ChrW(39)
-        Dim strSQL As String = _
-                "IF NOT EXISTS ( " & vbCrLf & _
-                "SELECT * FROM RecordSerNo " & vbCrLf & _
-                "WHERE lot_no='" & LotNo & "' AND IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "') " & vbCrLf & _
-                "BEGIN " & vbCrLf & _
-                "DECLARE @SerNo Int; " & vbCrLf & _
-                "IF NOT EXISTS (" & vbCrLf & _
-                "SELECT * FROM Records " & vbCrLf & _
-                "WHERE lot_no='" & LotNo & "') " & vbCrLf & _
-                "BEGIN " & vbCrLf & _
-                "SELECT @SerNo=(ISNULL(MAX(SerNo), 0) + 1) FROM RecordSerNo " & vbCrLf & _
-                "WHERE IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "' " & vbCrLf & _
-                "GROUP BY IMI_No " & vbCrLf & _
-                "INSERT INTO RecordSerNo VALUES ('" & LotNo & "', '" & SpecNo & "', GETDATE(), ISNULL(@SerNo, 1)) " & vbCrLf & _
-                "SELECT ISNULL(@SerNo, 1) " & vbCrLf & _
-                "END " & vbCrLf & _
-                "ELSE" & vbCrLf & _
-                "BEGIN " & vbCrLf & _
-                "SELECT ISNULL(@SerNo, 0) " & vbCrLf & _
-                "END " & vbCrLf & _
-                "END " & vbCrLf & _
-                "ELSE " & vbCrLf & _
-                "BEGIN " & vbCrLf & _
-                "SELECT TOP 1 @SerNo=SerNo FROM RecordSerNo " & vbCrLf & _
-                "WHERE lot_no='" & LotNo & "' AND IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "' ORDER BY RecDate DESC " & vbCrLf & _
-                "SELECT ISNULL(@SerNo, 1) " & vbCrLf & _
+        Dim strSQL As String =
+                "IF NOT EXISTS ( " & vbCrLf &
+                "SELECT * FROM RecordSerNo " & vbCrLf &
+                "WHERE lot_no='" & LotNo & "' AND IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "') " & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "DECLARE @SerNo Int; " & vbCrLf &
+                "IF NOT EXISTS (" & vbCrLf &
+                "SELECT * FROM Records " & vbCrLf &
+                "WHERE lot_no='" & LotNo & "') " & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "SELECT @SerNo=(ISNULL(MAX(SerNo), 0) + 1) FROM RecordSerNo " & vbCrLf &
+                "WHERE IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "' " & vbCrLf &
+                "GROUP BY IMI_No " & vbCrLf &
+                "INSERT INTO RecordSerNo VALUES ('" & LotNo & "', '" & SpecNo & "', GETDATE(), ISNULL(@SerNo, 1)) " & vbCrLf &
+                "SELECT ISNULL(@SerNo, 1) " & vbCrLf &
+                "END " & vbCrLf &
+                "ELSE" & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "SELECT ISNULL(@SerNo, 1) " & vbCrLf &
+                "END " & vbCrLf &
+                "END " & vbCrLf &
+                "ELSE " & vbCrLf &
+                "BEGIN " & vbCrLf &
+                "SELECT TOP 1 @SerNo=SerNo FROM RecordSerNo " & vbCrLf &
+                "WHERE lot_no='" & LotNo & "' AND IMI_No='" & SpecNo & "' AND RecDate>='" & DateVal1 & "' AND RecDate<'" & DateVal2 & "' ORDER BY RecDate DESC " & vbCrLf &
+                "SELECT ISNULL(@SerNo, 1) " & vbCrLf &
                 "END "
 
         If LotNo.EndsWith("NW") Then
