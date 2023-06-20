@@ -5,20 +5,20 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\User\source\repos\epson\az_LMservices\az_LMservices\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2022-11-30T08:38:14.1790766Z;True|2022-11-30T16:22:56.4964080+08:00;True|2022-11-29T15:15:48.3828058+08:00;True|2022-11-29T10:56:45.5243582+08:00;True|2022-11-28T21:41:23.3854389+08:00;True|2022-11-24T09:55:40.6357133+08:00;True|2022-11-24T00:59:57.2939741+08:00;True|2022-11-24T00:49:48.3755337+08:00;True|2022-11-24T00:09:24.4906498+08:00;True|2022-11-24T00:02:27.1589329+08:00;False|2022-11-24T00:01:12.6046019+08:00;True|2022-11-21T00:14:34.4459088+08:00;True|2022-11-20T20:50:44.9252051+08:00;True|2022-11-20T20:48:15.9102436+08:00;True|2022-11-20T15:22:40.1343717+08:00;True|2022-11-20T01:47:55.4835530+08:00;True|2022-11-20T01:08:05.3636016+08:00;True|2022-11-20T01:05:55.8341417+08:00;False|2022-11-20T01:04:45.9536617+08:00;True|2022-11-20T00:45:24.4169817+08:00;True|2022-11-18T14:35:26.7212864+08:00;</History>
+    <History>True|2023-06-20T17:50:30.7190315Z;True|2023-06-21T01:23:18.9931800+08:00;True|2023-06-21T01:18:58.2821066+08:00;True|2023-06-20T21:44:42.8386795+08:00;True|2023-06-20T21:39:00.0239802+08:00;True|2023-06-20T10:51:06.3203180+08:00;True|2022-11-30T16:38:14.1790766+08:00;True|2022-11-30T16:22:56.4964080+08:00;True|2022-11-29T15:15:48.3828058+08:00;True|2022-11-29T10:56:45.5243582+08:00;True|2022-11-28T21:41:23.3854389+08:00;True|2022-11-24T09:55:40.6357133+08:00;True|2022-11-24T00:59:57.2939741+08:00;True|2022-11-24T00:49:48.3755337+08:00;True|2022-11-24T00:09:24.4906498+08:00;True|2022-11-24T00:02:27.1589329+08:00;False|2022-11-24T00:01:12.6046019+08:00;True|2022-11-21T00:14:34.4459088+08:00;True|2022-11-20T20:50:44.9252051+08:00;True|2022-11-20T20:48:15.9102436+08:00;True|2022-11-20T15:22:40.1343717+08:00;True|2022-11-20T01:47:55.4835530+08:00;True|2022-11-20T01:08:05.3636016+08:00;True|2022-11-20T01:05:55.8341417+08:00;False|2022-11-20T01:04:45.9536617+08:00;True|2022-11-20T00:45:24.4169817+08:00;True|2022-11-18T14:35:26.7212864+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/az_LMservices.dll">
-      <publishTime>11/30/2022 16:38:12</publishTime>
+      <publishTime>06/21/2023 01:50:29</publishTime>
     </File>
     <File Include="bin/az_LMservices.pdb">
-      <publishTime>11/30/2022 16:38:12</publishTime>
+      <publishTime>06/21/2023 01:50:29</publishTime>
     </File>
     <File Include="bin/az_LMservices.xml">
-      <publishTime>11/30/2022 16:38:12</publishTime>
+      <publishTime>06/21/2023 01:50:29</publishTime>
     </File>
     <File Include="bin/az_LMservices.XmlSerializers.dll">
-      <publishTime>11/30/2022 16:38:13</publishTime>
+      <publishTime>06/21/2023 01:50:30</publishTime>
     </File>
     <File Include="LMservices.asmx">
       <publishTime>06/03/2010 15:35:12</publishTime>

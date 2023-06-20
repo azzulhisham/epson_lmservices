@@ -26,7 +26,7 @@ Public Class az_Services
     <WebMethod(Description:="Returns 'Hello World'... ")> _
     Public Function HelloWorld() As String
 
-        Return "Hello World"
+        Return "[Hello Epson] : Database server response " & CheckDatabase.ToString()
 
     End Function
 
@@ -72,7 +72,7 @@ Public Class az_Services
     <WebMethod(Description:="Returns the information about this services... ")> _
     Public Function AboutMe() As String
 
-        Return "This WebServices is designed by Zulhisham @2010."
+        Return "{azWebServices for Marking system. Database Status: [" & CheckDatabase.ToString() & "] :: " & marking2.AboutMe & "}"
 
     End Function
 
@@ -1418,18 +1418,18 @@ Public Class az_Services
 
 
         If SQL = 1 Then
-            Dim sConnStr As String = _
-                "SERVER=" & sqlServer & "; " & _
-                "DataBase=" & "; " & _
-                "uid=" & sqluid & "; " & _
+            Dim sConnStr As String =
+                "SERVER=" & sqlServer & "; " &
+                "DataBase=" & "; " &
+                "uid=" & sqluid & "; " &
                 "pwd=" & sqlpwd
             '"Integrated Security=SSPI"
 
             Dim dbConnection As New SqlConnection(sConnStr)
             Dim ch As Char = ChrW(39)
-            Dim strSQL As String = _
-                "IF NOT EXISTS (SELECT * FROM Sys.DATABASES WHERE Name='" & _
-                sqlName & "') " & _
+            Dim strSQL As String =
+                "IF NOT EXISTS (SELECT * FROM Sys.DATABASES WHERE Name='" &
+                sqlName & "') " &
                 "CREATE DATABASE [" & sqlName & "]"
 
             Try

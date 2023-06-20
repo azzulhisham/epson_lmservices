@@ -183,10 +183,10 @@
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>az_LMservices_CommonData_DataCenter</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://172.16.59.252/Marking2/Marking2.asmx">
+    <WebReferenceUrl Include="http://localhost/Marking2/Marking2.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\Marking2\</RelPath>
-      <UpdateFromURL>http://172.16.59.252/Marking2/Marking2.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost/Marking2/Marking2.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
